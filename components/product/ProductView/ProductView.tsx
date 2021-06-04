@@ -4,7 +4,8 @@ import { NextSeo } from 'next-seo'
 import { FC, useEffect, useState } from 'react'
 import s from './ProductView.module.css'
 import { Swatch, ProductSlider } from '@components/product'
-import { Button, Container, Text, useUI } from '@components/ui'
+import { Container, Text, useUI } from '@components/ui'
+import { Button } from '@chakra-ui/react'
 import type { Product } from '@commerce/types/product'
 import usePrice from '@framework/product/use-price'
 import { useAddItem } from '@framework/cart'
@@ -147,8 +148,9 @@ const ProductView: FC<Props> = ({ product }) => {
               type="button"
               className={s.button}
               onClick={addToCart}
-              loading={loading}
+              isLoading={loading}
               disabled={variant?.availableForSale === false}
+              variant="pill"
             >
               {variant?.availableForSale === false
                 ? 'Not Available'

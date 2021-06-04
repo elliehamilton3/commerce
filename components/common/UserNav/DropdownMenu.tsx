@@ -1,11 +1,11 @@
 import cn from 'classnames'
 import Link from 'next/link'
 import { FC, useRef, useState, useEffect } from 'react'
-import { useTheme } from 'next-themes'
+// import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 import s from './DropdownMenu.module.css'
 import { Avatar } from '@components/common'
-import { Moon, Sun } from '@components/icons'
+// import { Moon, Sun } from '@components/icons'
 import { useUI } from '@components/ui/context'
 import ClickOutside from '@lib/click-outside'
 import useLogout from '@framework/auth/use-logout'
@@ -38,7 +38,7 @@ const LINKS = [
 const DropdownMenu: FC<DropdownMenuProps> = ({ open = false }) => {
   const logout = useLogout()
   const { pathname } = useRouter()
-  const { theme, setTheme } = useTheme()
+  // const { theme, setTheme } = useTheme()
   const [display, setDisplay] = useState(false)
   const { closeSidebarIfPresent } = useUI()
   const ref = useRef() as React.MutableRefObject<HTMLUListElement>
@@ -87,7 +87,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({ open = false }) => {
                 </div>
               </li>
             ))}
-            <li>
+            {/* <li>
               <a
                 className={cn(s.link, 'justify-between')}
                 onClick={() => {
@@ -106,7 +106,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({ open = false }) => {
                   )}
                 </div>
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 className={cn(s.link, 'border-t border-accents-2 mt-4')}

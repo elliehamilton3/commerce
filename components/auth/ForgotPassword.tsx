@@ -1,7 +1,8 @@
 import { FC, useEffect, useState, useCallback } from 'react'
 import { validate } from 'email-validator'
 import { useUI } from '@components/ui/context'
-import { Logo, Button, Input } from '@components/ui'
+import { Logo, Input } from '@components/ui'
+import { Button } from '@chakra-ui/react'
 
 interface Props {}
 
@@ -50,12 +51,7 @@ const ForgotPassword: FC<Props> = () => {
 
         <Input placeholder="Email" onChange={setEmail} type="email" />
         <div className="pt-2 w-full flex flex-col">
-          <Button
-            variant="slim"
-            type="submit"
-            loading={loading}
-            disabled={disabled}
-          >
+          <Button type="submit" loading={loading} disabled={disabled}>
             Recover Password
           </Button>
         </div>

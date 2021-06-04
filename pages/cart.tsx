@@ -3,7 +3,8 @@ import useCart from '@framework/cart/use-cart'
 import usePrice from '@framework/product/use-price'
 import commerce from '@lib/api/commerce'
 import { Layout } from '@components/common'
-import { Button, Text } from '@components/ui'
+import { Text } from '@components/ui'
+import { Button } from '@chakra-ui/react'
 import { Bag, Cross, Check, MapPin, CreditCard } from '@components/icons'
 import { CartItem } from '@components/cart'
 
@@ -156,11 +157,11 @@ export default function Cart() {
           <div className="flex flex-row justify-end">
             <div className="w-full lg:w-72">
               {isEmpty ? (
-                <Button href="/" Component="a" width="100%">
+                <Button href="/" width="100%">
                   Continue Shopping
                 </Button>
               ) : (
-                <Button href="/checkout" Component="a" width="100%">
+                <Button href="/checkout" width="100%">
                   Proceed to Checkout
                 </Button>
               )}

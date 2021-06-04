@@ -1,5 +1,7 @@
 import React, { FC, useMemo } from 'react'
-import { ThemeProvider } from 'next-themes'
+// import { ThemeProvider } from 'next-themes'
+import { ChakraProvider } from '@chakra-ui/react'
+import { candideChakraTheme } from 'styles/chakra-override'
 
 export interface State {
   displaySidebar: boolean
@@ -202,6 +204,6 @@ export const useUI = () => {
 
 export const ManagedUIContext: FC = ({ children }) => (
   <UIProvider>
-    <ThemeProvider>{children}</ThemeProvider>
+    <ChakraProvider theme={candideChakraTheme}>{children}</ChakraProvider>
   </UIProvider>
 )

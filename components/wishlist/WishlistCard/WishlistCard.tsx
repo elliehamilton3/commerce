@@ -4,8 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import s from './WishlistCard.module.css'
 import { Trash } from '@components/icons'
-import { Button, Text } from '@components/ui'
-
+import { Text } from '@components/ui'
+import { Button } from '@chakra-ui/react'
 import { useUI } from '@components/ui/context'
 import type { Product } from '@commerce/types/product'
 import usePrice from '@framework/product/use-price'
@@ -86,7 +86,7 @@ const WishlistCard: FC<Props> = ({ product }) => {
             'py-1 px-3 border border-secondary rounded-md shadow-sm hover:bg-primary-hover'
           }
           onClick={addToCart}
-          loading={loading}
+          isLoading={loading}
         >
           Add to Cart
         </Button>

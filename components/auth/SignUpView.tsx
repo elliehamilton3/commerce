@@ -2,7 +2,8 @@ import { FC, useEffect, useState, useCallback } from 'react'
 import { validate } from 'email-validator'
 import { Info } from '@components/icons'
 import { useUI } from '@components/ui/context'
-import { Logo, Button, Input } from '@components/ui'
+import { Logo, Input } from '@components/ui'
+import { Button } from '@chakra-ui/react'
 import useSignup from '@framework/auth/use-signup'
 
 interface Props {}
@@ -86,12 +87,7 @@ const SignUpView: FC<Props> = () => {
           </span>
         </span>
         <div className="pt-2 w-full flex flex-col">
-          <Button
-            variant="slim"
-            type="submit"
-            loading={loading}
-            disabled={disabled}
-          >
+          <Button type="submit" loading={loading} disabled={disabled}>
             Sign Up
           </Button>
         </div>
