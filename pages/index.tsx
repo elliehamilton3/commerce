@@ -12,7 +12,7 @@ export async function getStaticProps({
 }: GetStaticPropsContext) {
   const config = { locale, locales }
   const { products } = await commerce.getAllProducts({
-    variables: { first: 12 },
+    variables: { first: 20 },
     config,
     preview,
   })
