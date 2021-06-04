@@ -1,5 +1,5 @@
-import { DefaultTheme, css, SimpleInterpolation } from 'styled-components'
-import { StyleSizes } from 'types'
+// import { DefaultTheme, css, SimpleInterpolation } from 'styled-components'
+// import { any } from 'types'
 
 export const borderRadius = '0.5rem'
 
@@ -55,7 +55,7 @@ export const grid = {
   },
 }
 
-export const icons: StyleSizes = {
+export const icons: any = {
   s: '0.8rem',
   m: '1.6rem',
   l: '2.4rem',
@@ -63,14 +63,14 @@ export const icons: StyleSizes = {
   xxl: '4rem',
 }
 
-export const inner: StyleSizes = {
+export const inner: any = {
   s: '4fr 6fr 4fr',
   m: '3fr 8fr 3fr',
   l: '2fr 10fr 2fr',
   xl: '1fr 12fr 1fr',
 }
 
-export const media: StyleSizes = {
+export const media: any = {
   xs: '320px',
   s: '768px',
   m: '992px',
@@ -79,7 +79,7 @@ export const media: StyleSizes = {
 
 export const siteWidth = '128rem'
 
-export const space: StyleSizes = {
+export const space: any = {
   xs: '0.4rem',
   s: '0.8rem',
   m: '1.6rem',
@@ -88,7 +88,7 @@ export const space: StyleSizes = {
   xxl: '8rem',
 }
 
-export const text: StyleSizes = {
+export const text: any = {
   xxs: '1rem',
   xs: '1.2rem',
   s: '1.6rem',
@@ -116,14 +116,14 @@ interface SpacerInterface {
 const setSpace = (breakpoint: string, size: string): string =>
   `@media (min-width: ${media[breakpoint]}) {margin-bottom: ${space[size]};}`
 
-const spacer = (props: SpacerInterface): SimpleInterpolation =>
-  css`
-    ${Object.keys(props).map((breakpoint) =>
-      setSpace(breakpoint, props[breakpoint])
-    )}
-  `
+// const spacer = (props: SpacerInterface): SimpleInterpolation =>
+//   css`
+//     ${Object.keys(props).map((breakpoint) =>
+//       setSpace(breakpoint, props[breakpoint])
+//     )}
+//   `
 
-const theme: DefaultTheme = {
+const theme: any = {
   borderRadius,
   colors,
   grid,
@@ -132,7 +132,7 @@ const theme: DefaultTheme = {
   media,
   siteWidth,
   space,
-  spacer,
+  // spacer,
   text,
   fontFamily,
   transition,
